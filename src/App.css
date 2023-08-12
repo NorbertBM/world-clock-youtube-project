@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background: #1c1717;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  font-family: "Roboto", sans-serif;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 50px);
+  background: linear-gradient(45deg, #000000, #ff0000, #000000);
+  background: linear-gradient(45deg, #000000, #1d5b82, #000000);
+
+  z-index: -1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cities {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+
+  backdrop-filter: blur(10px);
+
+  transition: all 0.3s;
+}
+.city-zone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.5rem 20px;
+  padding: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
+  color: #ddd;
+  backdrop-filter: blur(10px);
+
+  width: 130px;
+  height: 130px;
+  position: relative;
+  cursor: pointer;
+
+  transition: all 0.3s;
+  &:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #f24646;
+    outline: 1px solid #f24646;
   }
-  to {
-    transform: rotate(360deg);
+  &:active {
+    transform: scale(0.8);
+  }
+  .city-name {
+    font-size: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .city-time {
+    font-size: 2rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
+    border-radius: 10px;
   }
 }
