@@ -1,8 +1,8 @@
 import "./App.css";
-import ClockDashboard from "./project/ClockDashboard";
+import "./main.css";
 
 function App() {
-  return <ClockDashboard />;
+  return <h1>App</h1>;
 }
 
 export default App;
